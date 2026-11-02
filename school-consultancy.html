@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YourBrand: Boarding School Admission Consultants</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#1b1f2a;--muted:#5d6577;--brand:#1f6feb;--bt:#fff;--bd:#e2e5ee;--chip:#eaf1ff;--ok:#12805c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10131a;--card:#181c26;--text:#eceff6;--muted:#a1a9bb;--brand:#5b9bff;--bt:#0b1020;--bd:#2a3040;--chip:#1f2a44;--ok:#4cd2a0}}
+:root[data-theme="dark"]{--bg:#10131a;--card:#181c26;--text:#eceff6;--muted:#a1a9bb;--brand:#5b9bff;--bt:#0b1020;--bd:#2a3040;--chip:#1f2a44;--ok:#4cd2a0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:920px;margin:0 auto;padding:0 16px}
+header{background:var(--card);border-bottom:1px solid var(--bd)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.logo{font-weight:800;font-size:18px;color:var(--text);text-decoration:none}
+nav{display:flex;gap:4px;overflow-x:auto;padding-bottom:10px}
+nav a{white-space:nowrap;padding:7px 12px;border-radius:99px;color:var(--muted);text-decoration:none;font-size:15px}
+nav a.on{background:var(--chip);color:var(--brand);font-weight:600}
+.btn{background:var(--brand);color:var(--bt);border:0;border-radius:10px;padding:10px 16px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.btn.alt{background:var(--chip);color:var(--brand)}
+.view{display:none;padding:22px 0 10px}.view.on{display:block}
+h1{font-size:28px;line-height:1.2;margin:0 0 10px}h2{font-size:21px;margin:26px 0 10px}h3{margin:0 0 4px}
+.sub{color:var(--muted)}
+.hero{padding:10px 0 6px}.hero .btn{margin:14px 8px 0 0}
+.grid{display:grid;gap:12px}
+@media(min-width:700px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.filters{grid-template-columns:repeat(4,1fr)!important}}
+.box,.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.card{margin-bottom:14px}
+.num{width:30px;height:30px;border-radius:50%;background:var(--brand);color:var(--bt);display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:6px}
+.filters{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+select,input{width:100%;padding:11px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--text);font-size:15px}
+input{margin:6px 0;background:var(--bg)}
+.loc,.count{color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tag{background:var(--chip);color:var(--brand);border-radius:99px;padding:3px 10px;font-size:13px}
+.fee{font-weight:700}.rate{color:var(--ok);font-weight:600}
+.row{display:flex;gap:10px;margin-top:10px}.row .btn{flex:1}
+.cta{background:var(--brand);color:var(--bt);border-radius:14px;padding:20px;margin:22px 0;text-align:center}
+.cta .btn{background:var(--bt);color:var(--brand);margin-top:8px}
+.note{background:var(--chip);color:var(--muted);font-size:13px;padding:8px 12px;border-radius:8px;margin:10px 0}
+.price{font-size:30px;font-weight:800;color:var(--brand)}
+ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+details{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin-bottom:8px}
+summary{font-weight:600;cursor:pointer}
+footer{padding:22px 0 30px;color:var(--muted);font-size:13px;text-align:center}
+dialog{border:0;border-radius:16px;padding:20px;width:min(420px,92vw);background:var(--card);color:var(--text)}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="top"><a class="logo" href="#home">🏫 YourBrand</a><button class="btn" onclick="openLead('')">Book Consultation</button></div>
+<nav id="nav"><a href="#home" data-v="home">Home</a><a href="#schools" data-v="schools">Schools</a><a href="#how-it-works" data-v="how-it-works">How it works</a><a href="#pricing" data-v="pricing">Pricing</a><a href="#contact" data-v="contact">Contact</a></nav>
+</div></header>
+<main class="wrap">
+
+<section class="view" id="v-home">
+<div class="hero"><h1>The right boarding school for your child, chosen with an expert.</h1>
+<p class="sub">We shortlist schools in Panchgani and beyond, arrange visits and handle your application from start to finish. You deal only with us.</p>
+<a class="btn" href="#schools">Explore Schools</a><button class="btn alt" onclick="openLead('')">Book Consultation</button></div>
+<h2>Why families use a consultant</h2>
+<div class="grid g3">
+<div class="box"><h3>Personal shortlist</h3><p class="sub">Based on your child’s needs, board, budget and your family’s priorities.</p></div>
+<div class="box"><h3>One point of contact</h3><p class="sub">We coordinate with schools for you: visits, forms, interactions and follow-ups.</p></div>
+<div class="box"><h3>Clear fees</h3><p class="sub">You see our charges up front. No surprises, and no guaranteed-seat promises.</p></div>
+</div>
+<h2>Popular schools</h2><div id="featured"></div>
+<div class="cta"><strong>Not sure where to start?</strong><br>Tell us about your child and we will call you back.<br><button class="btn" onclick="openLead('')">Request a Callback</button></div>
+</section>
+
+<section class="view" id="v-schools">
+<h1>Boarding schools we work with</h1>
+<p class="sub">Compare fees and boards. Ask us for details and we will arrange everything.</p>
+<div class="filters">
+<select id="fBoard"><option value="">All boards</option><option>CBSE</option><option>ICSE</option><option>State Board</option></select>
+<select id="fType"><option value="">All types</option><option>Full Boarding</option><option>Day-cum-Boarding</option></select>
+<select id="fGender"><option value="">Boys &amp; Girls</option><option>Coed</option><option>Girls</option><option>Boys</option></select>
+<select id="fFee"><option value="">Any fee</option><option value="0-2">Under ₹2 L</option><option value="2-3">₹2–3 L</option><option value="3-99">Above ₹3 L</option></select>
+</div>
+<div class="note">Demo listings with made-up data. Replace the SCHOOLS list in the code with verified information.</div>
+<div class="count" id="count"></div><div id="list"></div>
+</section>
+
+<section class="view" id="v-school"><div id="detail"></div></section>
+
+<section class="view" id="v-how-it-works">
+<h1>How it works</h1>
+<div class="grid">
+<div class="box"><span class="num">1</span><h3>Book a consultation</h3><p class="sub">Share your child’s class, board and budget. We talk through your priorities.</p></div>
+<div class="box"><span class="num">2</span><h3>Get a shortlist</h3><p class="sub">We recommend 3–5 schools that fit, with fees and the pros and cons of each.</p></div>
+<div class="box"><span class="num">3</span><h3>Visits and interactions</h3><p class="sub">We schedule campus visits and student interactions with the schools.</p></div>
+<div class="box"><span class="num">4</span><h3>Application support</h3><p class="sub">We help with forms, documents and follow-up until you get a decision.</p></div>
+<div class="box"><span class="num">5</span><h3>Admission confirmed</h3><p class="sub">Once you confirm, our success fee applies as explained on the Pricing page.</p></div>
+</div>
+<h2>Common questions</h2>
+<details><summary>When do admissions start?</summary><p class="sub">Most schools open registration for the next session between October and February.</p></details>
+<details><summary>Which documents are needed?</summary><p class="sub">Usually a birth certificate, address proof, previous report cards, a transfer certificate and photos.</p></details>
+<details><summary>Do you guarantee admission?</summary><p class="sub">No. Admission is the school’s decision. We improve your chances by matching and preparing well.</p></details>
+</section>
+
+<section class="view" id="v-pricing">
+<h1>Simple, transparent pricing</h1>
+<div class="grid g3">
+<div class="box"><h3>Consultation</h3><div class="price" id="pFee"></div><p class="sub">One-time fee for needs assessment and a personal shortlist.</p></div>
+<div class="box"><h3>Success fee</h3><div class="price" id="pSuccess"></div><p class="sub">Charged only after admission is confirmed.</p></div>
+<div class="box"><h3>School fees</h3><div class="price">As listed</div><p class="sub">Paid to the school at the school’s official rates.</p></div>
+</div>
+<div class="note">Disclosure: on a confirmed admission we may also receive a commission from the school. It does not change what you pay the school and it never affects our recommendations.</div>
+<button class="btn" onclick="openLead('')">Book Consultation</button>
+</section>
+
+<section class="view" id="v-contact">
+<h1>Talk to us</h1>
+<div class="box"><p>📞 <b id="cPhone"></b><br>✉️ <b>hello@yourbrand.example</b><br>🕘 Mon–Sat, 10am–7pm</p><button class="btn" onclick="openLead('')">Request a Callback</button></div>
+</section>
+</main>
+<footer><div class="wrap">© YourBrand. Fees and details may change, so please confirm before applying.</div></footer>
+
+<dialog id="dlg"><h3>Book a consultation</h3>
+<p id="dlgS" class="sub" style="margin:0 0 6px"></p>
+<input id="pName" placeholder="Parent’s name" autocomplete="name"><input id="pPhone" placeholder="Phone number" inputmode="tel" autocomplete="tel"><input id="pClass" placeholder="Child’s class and preferred board">
+<div class="row"><button class="btn alt" onclick="dlg.close()">Cancel</button><button class="btn" onclick="sendLead()">Send on WhatsApp</button></div></dialog>
+
+<script>
+// ---- EDIT THESE ----
+const WA="919999999999", PHONE="+91 99999 99999", CONSULT_FEE="₹1,999", SUCCESS_FEE="Set your own %";
+const SCHOOLS=[
+{n:"Hillcrest Residential School",lo:2.2,hi:3.1,b:"CBSE",t:"Full Boarding",g:"Coed",c:"Class 1–12",e:1996,r:4.6,d:"Sample text: calm hill campus with sports grounds and a comfortable hostel."},
+{n:"Valley View Academy",lo:1.4,hi:1.8,b:"State Board",t:"Day-cum-Boarding",g:"Coed",c:"LKG–10",e:2001,r:4.3,d:"Sample text: an affordable option with activity-based learning."},
+{n:"St. Example Girls’ School",lo:3.4,hi:4.2,b:"ICSE",t:"Full Boarding",g:"Girls",c:"LKG–10",e:1902,r:4.8,d:"Sample text: heritage building and small class sizes."},
+{n:"Pinecrest International",lo:2.6,hi:3.4,b:"ICSE",t:"Full Boarding",g:"Coed",c:"Class 3–12",e:1988,r:4.4,d:"Sample text: strong academics with arts and music."},
+{n:"Eagle Ridge Boys’ School",lo:3.6,hi:3.6,b:"CBSE",t:"Full Boarding",g:"Boys",c:"Nursery–12",e:1975,r:4.5,d:"Sample text: discipline-focused with riding and archery."},
+{n:"Green Meadow School",lo:1.0,hi:1.4,b:"State Board",t:"Day-cum-Boarding",g:"Coed",c:"Class 1–12",e:2005,r:4.1,d:"Sample text: budget-friendly with a bilingual curriculum."}];
+// --------------------
+const $=id=>document.getElementById(id),fmt=s=>s.lo===s.hi?`₹${s.lo} L`:`₹${s.lo}–${s.hi} L`;
+$("pFee").textContent=CONSULT_FEE;$("pSuccess").textContent=SUCCESS_FEE;$("cPhone").textContent=PHONE;
+const card=(s,i)=>`<div class="card"><h3>${s.n}</h3><div class="loc">📍 Panchgani, Maharashtra</div>
+<div class="tags"><span class="tag">${s.b}</span><span class="tag">${s.t}</span><span class="tag">${s.g}</span><span class="tag">${s.c}</span></div>
+<div><span class="fee">${fmt(s)}</span> per year · Est. ${s.e} · <span class="rate">★ ${s.r}</span></div>
+<div class="row"><a class="btn alt" href="#school-${i}">View details</a><button class="btn" onclick="openLead(SCHOOLS[${i}].n)">Ask our counsellor</button></div></div>`;
+function render(){
+ const b=$("fBoard").value,t=$("fType").value,g=$("fGender").value,f=$("fFee").value,[lo,hi]=f?f.split("-").map(Number):[0,999];
+ const L=SCHOOLS.map((s,i)=>[s,i]).filter(([s])=>(!b||s.b===b)&&(!t||s.t===t)&&(!g||s.g===g)&&s.lo<hi&&s.hi>=lo);
+ $("count").textContent=L.length+" school"+(L.length===1?"":"s")+" found";
+ $("list").innerHTML=L.length?L.map(([s,i])=>card(s,i)).join(""):'<p class="sub">No schools match these filters.</p>';
+}
+["fBoard","fType","fGender","fFee"].forEach(i=>$(i).addEventListener("change",render));
+$("featured").innerHTML=SCHOOLS.slice(0,3).map(card).join("");
+function detail(i){const s=SCHOOLS[i];if(!s){location.hash="schools";return}
+ $("detail").innerHTML=`<a href="#schools" class="sub">← All schools</a><h1 style="margin-top:8px">${s.n}</h1><div class="loc">📍 Panchgani, Maharashtra</div>
+ <div class="tags"><span class="tag">${s.b}</span><span class="tag">${s.t}</span><span class="tag">${s.g}</span><span class="tag">${s.c}</span></div>
+ <p><span class="fee">${fmt(s)}</span> per year · Est. ${s.e} · <span class="rate">★ ${s.r}</span></p><p>${s.d}</p>
+ <h2>What our consultant checks</h2><ul><li>Hostel safety, food and medical care</li><li>Academic results and teaching quality</li><li>Total yearly cost, including extras</li><li>Fit with your child’s age and personality</li></ul>
+ <div class="cta"><strong>Interested in this school?</strong><br>We handle the visit and application for you.<br><button class="btn" onclick="openLead(SCHOOLS[${i}].n)">Book Consultation</button></div>`}
+function route(){const h=location.hash.slice(1)||"home";let v=h;
+ if(h.startsWith("school-")){detail(+h.slice(7));v="school"}
+ else if(!$("v-"+h))v="home";
+ document.querySelectorAll(".view").forEach(e=>e.classList.toggle("on",e.id==="v-"+v));
+ document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",a.dataset.v===(v==="school"?"schools":v)));
+ window.scrollTo(0,0)}
+addEventListener("hashchange",route);
+let cur="";
+function openLead(n){cur=n;$("dlgS").textContent=n||"General enquiry";$("dlg").showModal()}
+function sendLead(){const n=$("pName").value.trim(),p=$("pPhone").value.trim(),c=$("pClass").value.trim();
+ if(!n||p.length<8){alert("Please enter your name and phone number.");return}
+ const m=`Hi, I’m ${n} (${p}). I’d like a consultation${cur?` about ${cur}`:""}${c?`. Child: ${c}`:""}.`;
+ window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank");$("dlg").close()}
+render();route();
+</script>
+</body>
+</html>
